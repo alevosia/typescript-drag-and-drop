@@ -6,7 +6,7 @@
 </p>
 
 ## Branch Description
-This branch splits the codebase using namespaces and bundled using TypeScript
+This branch splits the codebase using ES6 Modules
 
 ## Scripts
 
