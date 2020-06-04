@@ -85,7 +85,7 @@ class ProjectState extends State<Project> {
     moveProject(projectId: string, newStatus: ProjectStatus) {
         const project = this.projects.find((project) => project.id === projectId)
 
-        if (project) {
+        if (project && project.status !== newStatus) {
             project.status = newStatus
             this.invokeStateChangeListeners()
         }
@@ -263,7 +263,6 @@ class ProjectItem extends Component<HTMLUListElement, HTMLLIElement> implements 
     configure() {
         this.element.addEventListener('dragstart', this.dragStartHandler)
         this.element.addEventListener('dragend', this.dragEndHandler)
-
     }
 
     renderContent() {
@@ -272,6 +271,7 @@ class ProjectItem extends Component<HTMLUListElement, HTMLLIElement> implements 
         this.element.querySelector('p')!.textContent = this.description
     }
 }
+
 
 // =================================================================================================
 // Project List ====================================================================================
@@ -344,6 +344,7 @@ class ProjectList extends Component<HTMLDivElement, HTMLElement> implements Drag
         }
     }
 }
+
 
 // =================================================================================================
 // Project Input ===================================================================================
