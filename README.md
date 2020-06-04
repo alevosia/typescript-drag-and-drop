@@ -5,6 +5,9 @@
     A TypeScript tutorial project
 </p>
 
+## Branch Description
+This branch splits the codebase using namespaces and bundled using TypeScript
+
 ## Scripts
 
 Development
