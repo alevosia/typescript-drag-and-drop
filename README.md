@@ -5,6 +5,13 @@
     A TypeScript tutorial project
 </p>
 
+## Branches
+
+This repository is divided into 3 branches depending on how the codebase is split.
+ - master
+ - namespace
+ - modules
+  
 ## Scripts
 
 Development
