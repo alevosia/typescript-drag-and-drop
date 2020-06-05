@@ -1,12 +1,12 @@
 <h1 align="center">
-    Drag & Drop
+    Drag & Drop (namespace)
 </h1>
 <p align="center">
     A TypeScript tutorial project
 </p>
 
 ## Branch Description
-This branch splits the codebase using namespaces and bundled using TypeScript
+The code is split by enclosing all files in the `App` namespace and using the `/// <reference path="file_name.ts" />` to import other files. The source code is then compiled and bundled to a single JavaScript file.
 
 ## Scripts
 
