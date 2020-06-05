@@ -1,12 +1,12 @@
 <h1 align="center">
-    Drag & Drop
+    Drag & Drop (esmodules)
 </h1>
 <p align="center">
     A TypeScript tutorial project
 </p>
 
 ## Branch Description
-This branch splits the codebase using ES6 Modules
+The codebase is modularized using ES6 Modules, leveraging the `import` statement. Each file is compiled to its own JavaScript file with `app.js` embedded to `index.html` with `type="module"`. The browser will request for `app.js` and any subsequent dependencies.
 
 ## Scripts
 
