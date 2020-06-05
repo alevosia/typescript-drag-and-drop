@@ -1,8 +1,8 @@
 
-import { projectState } from '../states/project.js'
-import BaseComponent from './base.js'
-import { AutobindThis } from '../decorators/autobind.js'
-import * as Validation from '../utils/validation.js'
+import { projectState } from '../states/project'
+import BaseComponent from './base'
+import { AutobindThis } from '../decorators/autobind'
+import * as Validation from '../utils/validation'
 
 // =================================================================================================
 // Project Input ===================================================================================
