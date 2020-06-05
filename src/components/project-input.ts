@@ -1,12 +1,12 @@
 
 import { projectState } from '../states/project.js'
-import { Component } from './base.js'
+import BaseComponent from './base.js'
 import { AutobindThis } from '../decorators/autobind.js'
-import { Validatable, validate } from '../utils/validation.js'
+import * as Validation from '../utils/validation.js'
 
 // =================================================================================================
 // Project Input ===================================================================================
-export class ProjectInput extends Component<HTMLDivElement, HTMLFormElement> {
+export class ProjectInput extends BaseComponent<HTMLDivElement, HTMLFormElement> {
     titleInputElement: HTMLInputElement
     descriptionInputElement: HTMLInputElement
     peopleInputElement: HTMLInputElement
@@ -40,21 +40,21 @@ export class ProjectInput extends Component<HTMLDivElement, HTMLFormElement> {
     }
 
     private validateUserInput(title: string, description: string, people: number): boolean {
-        const titleValidatable: Validatable = {
+        const titleValidatable: Validation.Validatable = {
             name: 'Title',
             value: title,
             required: true,
             minLength: 3
         }
 
-        const descriptionValidatable: Validatable = {
+        const descriptionValidatable: Validation.Validatable = {
             name: 'Description',
             value: description,
             required: true,
             minLength: 5
         }
 
-        const peopleValidatable: Validatable = {
+        const peopleValidatable: Validation.Validatable = {
             name: 'People',
             value: people,
             required: true,
@@ -62,19 +62,19 @@ export class ProjectInput extends Component<HTMLDivElement, HTMLFormElement> {
             maxValue: 5
         }
 
-        const titleValidity = validate(titleValidatable)
+        const titleValidity = Validation.validate(titleValidatable)
         if (!titleValidity.isValid) {
             alert(titleValidity.message)
             return false
         }
 
-        const descriptionValidity = validate(descriptionValidatable)
+        const descriptionValidity = Validation.validate(descriptionValidatable)
         if (!descriptionValidity.isValid) {
             alert(descriptionValidity.message)
             return false
         }
 
-        const peopleValidity = validate(peopleValidatable)
+        const peopleValidity = Validation.validate(peopleValidatable)
         if (!peopleValidity.isValid) {
             alert(peopleValidity.message)
             return false
